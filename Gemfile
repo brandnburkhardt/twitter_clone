@@ -13,6 +13,7 @@ end
 group :development do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 2.13.2'
+  gem 'guard-rspec', '~> 3.0.2'
   gem 'pry-plus'
   gem 'pry-rails'
   gem 'better_errors'
@@ -21,7 +22,7 @@ end
 
 
 group :test do
-  gem 'capybara', '~> 2.1.0'
+  gem 'capybara', '1.1.2'
 end
 
 
