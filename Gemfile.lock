@@ -38,6 +38,8 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bond (0.4.3)
+    bootstrap-sass (2.3.1.0)
+      sass (~> 3.2)
     builder (3.0.4)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -219,6 +221,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   better_errors
   binding_of_caller
+  bootstrap-sass
   capybara (= 1.1.2)
   coffee-rails (~> 3.2.1)
   guard-rspec (~> 3.0.2)
