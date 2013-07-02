@@ -53,7 +53,7 @@ describe "Static Pages" do
     click_link "Home"
     click_link "Sign Up Now"
     page.should have_selector 'title', :text => full_title('')
-    click_link "Sample App"
+    click_link "Twitter Clone"
     page.should have_selector 'title', :text => full_title('')
   end
 end

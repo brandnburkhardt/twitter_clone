@@ -19,6 +19,7 @@ group :development do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'annotate'
 end
 
 
@@ -32,6 +33,5 @@ group :production do
 end
 
 gem 'jquery-rails'
-gem 'annotate'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
