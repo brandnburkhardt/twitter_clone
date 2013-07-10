@@ -84,6 +84,19 @@ describe "Authentication" do
           it { should have_selector 'title', :text => 'Sign In' }
         end
       end
+
+      describe "In The Microposts Controller" do
+
+        describe "Submitting To The Create Action" do
+          before { post microposts_path }
+          specify { response.should redirect_to signin_path }
+        end
+
+        describe "Submitting To The Destroy Action" do
+          before { delete micropost_path(FactoryGirl.create(:micropost)) }
+          specify { response.should redirect_to signin_path }
+        end
+      end
     end
 
     describe "As The Wrong User" do
