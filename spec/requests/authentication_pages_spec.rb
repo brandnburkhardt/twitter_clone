@@ -83,6 +83,16 @@ describe "Authentication" do
           before { visit users_path }
           it { should have_selector 'title', :text => 'Sign In' }
         end
+
+        describe "Visiting The Following Page" do
+          before { visit following_user_path(user) }
+          it { should have_selector 'title', :text => 'Sign In' }
+        end
+
+        describe "Visiting The Followers Page" do
+          before { visit followers_user_path(user) }
+          it { should have_selector 'title', :text => 'Sign In' }
+        end
       end
 
       describe "In The Microposts Controller" do
@@ -94,6 +104,18 @@ describe "Authentication" do
 
         describe "Submitting To The Destroy Action" do
           before { delete micropost_path(FactoryGirl.create(:micropost)) }
+          specify { response.should redirect_to signin_path }
+        end
+      end
+
+      describe "In The Relationships Controller" do
+        describe "Submitting To The Create Action" do
+          before { post relationships_path }
+          specify { response.should redirect_to signin_path }
+        end
+
+        describe "Submitting To The Destroy Action" do
+          before { delete relationship_path(1) }
           specify { response.should redirect_to signin_path }
         end
       end
